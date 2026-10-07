@@ -22,104 +22,81 @@
         body {
             margin: 0;
             min-height: 100vh;
-            background: linear-gradient(135deg, #160d14, #080a0e);
-            color: white;
+            background: #ffe6f0;
             font-family: Arial, sans-serif;
-            text-align: center;
+            color: #4a2635;
         }
 
         .container {
-            padding-top: 35px;
+            width: 500px;
+            margin: 70px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(180, 80, 120, 0.2);
+            text-align: center;
         }
 
-        .logo {
-            width: 75px;
-            height: 75px;
-            margin: auto;
-            border: 5px solid #ffbd00;
-            border-radius: 50%;
-            background: #72f5ff;
-            box-shadow: 0 0 25px #72f5ff;
+        .heart {
+            font-size: 45px;
+            margin-bottom: 10px;
         }
 
         h1 {
-            margin-top: 25px;
-            margin-bottom: 5px;
-            color: #ffb900;
-            font-size: 42px;
-            letter-spacing: 4px;
+            color: #d94f83;
+            margin-bottom: 8px;
         }
 
         .subtitle {
-            color: #aaa;
-            letter-spacing: 5px;
-        }
-
-        .box {
-            width: 520px;
-            margin: 45px auto 30px;
-            padding: 45px 40px;
-            background: #202228;
-            border-top: 6px solid #d40024;
-            border-left: 2px solid #ffbd00;
-            border-right: 2px solid #ffbd00;
-            border-bottom: 2px solid #ffbd00;
-            border-radius: 18px;
+            color: #9b687d;
+            margin-bottom: 30px;
         }
 
         input {
             width: 100%;
-            padding: 18px;
-            margin-bottom: 20px;
-            background: #0d0e11;
-            color: white;
-            border: 2px solid #333740;
-            border-radius: 8px;
-            font-size: 18px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 2px solid #f3b6cc;
+            border-radius: 12px;
+            font-size: 16px;
+            outline: none;
         }
 
-        input::placeholder {
-            color: #aaa;
+        input:focus {
+            border-color: #d94f83;
         }
 
         button {
             width: 100%;
-            padding: 17px;
-            background: #c90024;
-            color: #ffda45;
-            border: 2px solid #ffbd00;
-            border-radius: 8px;
-            font-size: 20px;
+            padding: 15px;
+            background: #e96b9b;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
             font-weight: bold;
-            letter-spacing: 2px;
             cursor: pointer;
         }
 
         button:hover {
-            background: #e0002b;
+            background: #d94f83;
         }
 
         .result {
-            width: 520px;
-            min-height: 80px;
-            margin: auto;
-            padding: 25px;
-            background: #152126;
-            border-left: 6px solid #68f5ff;
-            border-radius: 10px;
-            color: #ffcf32;
-            font-size: 20px;
+            margin-top: 25px;
+            padding: 18px;
+            min-height: 60px;
+            background: #fff0f5;
+            border-radius: 12px;
+            color: #c43f70;
             font-weight: bold;
         }
 
         footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            padding: 18px;
-            background: #a90022;
-            border-top: 5px solid #ffbd00;
-            color: #ddd;
+            text-align: center;
+            color: #9b687d;
+            margin-top: 30px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -128,21 +105,27 @@
 
     <div class="container">
 
-        <div class="logo"></div>
+        <div class="heart">💗</div>
 
-        <h1>ICT CLUB CHECKER</h1>
+        <h1>ICT Club Checker</h1>
 
-        <p class="subtitle">CANDIDATE VERIFICATION SYSTEM</p>
+        <p class="subtitle">
+            Candidate Verification System
+        </p>
 
-        <div class="box">
+        <input
+            type="text"
+            id="first-name"
+            placeholder="First Name">
 
-            <input type="text" id="first-name" placeholder="First Name">
+        <input
+            type="text"
+            id="last-name"
+            placeholder="Last Name">
 
-            <input type="text" id="last-name" placeholder="Last Name">
-
-            <button py-click="check_candidate">ENTER</button>
-
-        </div>
+        <button py-click="check_candidate">
+            CHECK CANDIDATE
+        </button>
 
         <div id="result" class="result"></div>
 
